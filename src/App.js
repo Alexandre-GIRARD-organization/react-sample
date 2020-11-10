@@ -1,6 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from '@material-ui/core/Button';
+import { Link, Typography } from '@material-ui/core';
+
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 function App() {
   return (
@@ -18,6 +33,10 @@ function App() {
         >
           Learn React
         </a>
+        <Copyright />
+        <Button variant="contained" color="primary">
+          Hello world
+        </Button>
       </header>
     </div>
   );
