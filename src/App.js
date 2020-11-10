@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from '@material-ui/core/Button';
 import { Link, Typography } from '@material-ui/core';
+import HelloWorldButton from './components/learn-react-button';
 
 function Copyright() {
   return (
@@ -34,9 +34,7 @@ function App() {
           Learn React
         </a>
         <Copyright />
-        <Button variant="contained" color="primary">
-          Hello world
-        </Button>
+        <HelloWorldButton />
       </header>
     </div>
   );
