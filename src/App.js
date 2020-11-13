@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Link, Typography } from '@material-ui/core';
 import HelloWorldButton from './components/learn-react-button';
+import { makeServer } from "./server"
+import CharactersGridList from './components/characters-grid-list';
+import { getCharacters } from './services/marvel-characters-service';
 
 function Copyright() {
   return (
@@ -17,24 +20,26 @@ function Copyright() {
   );
 }
 
+if (process.env.NODE_ENV === "development") {
+  makeServer({ environment: "development" })
+}
+
+
 function App() {
+  let [characters, setCharacters] = useState([])
+  
+    useEffect(() => {
+        getCharacters().then((charactersRes) => {
+            setCharacters(charactersRes);
+          });
+    }, [])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. Add code to test quality
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <CharactersGridList characters={characters} />
+
         <Copyright />
-        <HelloWorldButton />
       </header>
     </div>
   );
