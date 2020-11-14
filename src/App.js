@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Link, Typography } from '@material-ui/core';
-import HelloWorldButton from './components/learn-react-button';
 import { makeServer } from "./server"
 import CharactersGridList from './components/characters-grid-list';
 import { getCharacters } from './services/marvel-characters-service';
