@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 export default function CharactersGridList(props) {
   const classes = useStyles();
   const { characters, cols } = props;
-  
+
   return (
     <div className={classes.root}>
       <GridList cellHeight={160} className={classes.gridList} cols={cols || 3}>

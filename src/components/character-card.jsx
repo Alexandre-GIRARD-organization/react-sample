@@ -19,21 +19,7 @@ const styles = {
 class CharacterCard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      character: {
-        thumbnail: "",
-      },
-    };
   }
-
-  /*
-  componentDidMount() {
-    getCharacter(this.props.id).then((character) => {
-      this.setState(() => ({
-        character: character,
-      }));
-    });
-  }*/
 
   render() {
     const { character, classes } = this.props;
@@ -66,9 +52,5 @@ class CharacterCard extends React.Component {
     );
   }
 }
-
-CharacterCard.propTypes = {
-  id: PropTypes.number.isRequired
-};
 
 export default withStyles(styles)(CharacterCard);
