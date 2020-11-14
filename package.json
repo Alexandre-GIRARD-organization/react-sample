@@ -18,7 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "coverage": "react-scripts test --coverage --watchAll=false --collectCoverageFrom=src/**/*.{js,jsx} --collectCoverageFrom='!src/**/*.stories.js'",
+    "coverage": "react-scripts test --coverage --watchAll=false --collectCoverageFrom=src/**/*.{js,jsx} --collectCoverageFrom='!src/**/*.stories.js' --collectCoverageFrom='!src/stories/**/*.*'",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 6006 -s public --no-dll",
