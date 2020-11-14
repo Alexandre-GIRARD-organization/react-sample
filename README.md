@@ -1,5 +1,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Alexandre-GIRARD-organization_react-sample&metric=alert_status)](https://sonarcloud.io/dashboard?id=Alexandre-GIRARD-organization_react-sample)
 
+[![codecov](https://codecov.io/gh/Alexandre-GIRARD-organization/react-sample/graph/badge.svg)](https://codecov.io/gh/Alexandre-GIRARD-organization/react-sample)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## TODO
