@@ -26,8 +26,8 @@ export async function getCharacters() {
     const res = await axios.get(URL, {
         params : {
             apikey: apiKey,
-            limit: 12,
-            nameStartsWith:"spi"
+            limit: 60,
+            nameStartsWith:"wo"
         }
     }).catch(
         ex => console.error(`getCharacters exception -> ${ex}`)

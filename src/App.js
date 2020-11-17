@@ -1,45 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Link, Typography } from '@material-ui/core';
-import { makeServer } from "./server"
-import CharactersGridList from './components/characters-grid-list';
+import CharactersGridList from './components/characters/characters-grid-list';
 import { getCharacters } from './services/marvel-characters-service';
+import { ThemeProvider } from '@material-ui/core';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { green, red } from '@material-ui/core/colors';
+import MarvelAppBar from './components/layout/marvel-app-bar';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 if (process.env.NODE_ENV === "development") {
-  makeServer({ environment: "development" })
+  //makeServer({ environment: "development" })
 }
 
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: red[500],
+    },
+    secondary: {
+      main: green[500],
+    },
+  },
+});
 
 function App() {
   let [characters, setCharacters] = useState([])
-  
-    useEffect(() => {
-        getCharacters().then((charactersRes) => {
-            setCharacters(charactersRes);
-          });
-    }, [])
+
+  useEffect(() => {
+    getCharacters().then((charactersRes) => {
+      setCharacters(charactersRes);
+    });
+  }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <CharactersGridList characters={characters} />
-
-        <Copyright />
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <MarvelAppBar />
+      <CharactersGridList characters={characters} />
+    </ThemeProvider>
   );
 }
 

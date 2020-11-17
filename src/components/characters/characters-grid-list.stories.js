@@ -1,9 +1,9 @@
 import React from 'react';
-import { ironMan, wolverine, wonderMan } from '../characters';
+import { ironMan, wolverine, wonderMan } from '../../characters';
 import CharactersGridList from './characters-grid-list';
 
 export default {
-    title: 'Components/CharactersGridList',
+    title: 'characters/CharactersGridList',
     component: CharactersGridList,
 }
 
