@@ -1,7 +1,7 @@
 import { GridListTile } from '@material-ui/core';
 import { createMount } from '@material-ui/core/test-utils';
 import { shallow } from 'enzyme';
-import { ironMan, wolverine, wonderMan } from '../characters';
+import { ironMan, wolverine, wonderMan } from '../../characters';
 import CharactersGridList from './characters-grid-list';
 
 describe('<CharactersGridList />', () => {

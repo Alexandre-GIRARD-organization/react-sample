@@ -1,8 +1,8 @@
 import { createMount } from '@material-ui/core/test-utils';
 import { shallow } from 'enzyme';
-import { ironMan } from '../characters';
 import CharacterCard from './character-card';
 import { CardMedia } from '@material-ui/core';
+import { ironMan } from '../../characters';
 
 
 
