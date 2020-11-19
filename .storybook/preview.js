@@ -6,9 +6,10 @@ import { addDecorator } from '@storybook/react';
 import { withThemes } from '@react-theming/storybook-addon';
 
 import { blueTheme, redTheme } from '../src/themes';
+
+
+// storybook themes
 const themes = [blueTheme, redTheme];
-
-
 const providerFn = ({ theme, children }) => {
   //const muTheme = createMuiTheme(theme);
   const serialTheme = JSON.parse(JSON.stringify(theme));
@@ -21,6 +22,7 @@ addDecorator(withThemes(null, themes, { providerFn }));
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {
+    // storybook sort stories
     storySort: {
       order: ['layout', 'characters', 'example'],
     },
