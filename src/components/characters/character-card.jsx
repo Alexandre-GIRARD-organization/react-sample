@@ -14,10 +14,10 @@ const styles = {
   },
 };
 
+/**
+ * Card of a character
+ */
 class CharacterCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const { character, classes } = this.props;
