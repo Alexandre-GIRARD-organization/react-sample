@@ -2,7 +2,7 @@
   "name": "react-sample",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Alexandre-GIRARD-organization.github.io/react-sample",
+  "homepage": ".",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -22,8 +22,8 @@
     "coverage": "react-scripts test --coverage --watchAll=false --collectCoverageFrom=src/**/*.{js,jsx} --collectCoverageFrom='!src/**/*.stories.js' --collectCoverageFrom='!src/stories/**/*.*'",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "storybook": "start-storybook -p 6006 -s public --no-dll",
-    "build-storybook": "build-storybook -s public --no-dll"
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
