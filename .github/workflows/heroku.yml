@@ -15,4 +15,4 @@ jobs:
           email: alex1dre.girard@gmail.com # your heroku email
           api_key: 6bff9ddc-7993-4e07-8030-1d6b3d05b35a # your  heroku api key
           app_name: marvel-react-sample # you aplication name
-          dockerfile: './dockerfile' # set the path to the folder wher the Dokerfile is located
+          dockerfile: '.' # set the path to the folder wher the Dokerfile is located
