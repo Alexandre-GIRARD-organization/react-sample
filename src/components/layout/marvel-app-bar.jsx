@@ -1,4 +1,4 @@
-import { AppBar, InputBase, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, debounce, InputBase, Toolbar, Typography } from "@material-ui/core";
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import React from "react";
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function MarvelAppBar() {
+export default function MarvelAppBar({ handleSearch }) {
   const classes = useStyles();
   return (
     <AppBar position="static">
@@ -59,6 +59,7 @@ export default function MarvelAppBar() {
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
+              onChange={e => debounce(handleSearch(e.target.value),500)}
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
