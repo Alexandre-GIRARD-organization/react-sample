@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "endToEndTest": "cucumber-js --publish",
     "coverage": "react-scripts test --coverage --watchAll=false --collectCoverageFrom=src/**/*.{js,jsx} --collectCoverageFrom='!src/**/*.stories.js' --collectCoverageFrom='!src/stories/**/*.*'",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.8",
     "@babel/plugin-syntax-jsx": "^7.12.1",
+    "@cucumber/cucumber": "^7.0.0-rc.0",
     "@react-theming/storybook-addon": "^1.0.3",
     "@storybook/addon-actions": "^6.1.4",
     "@storybook/addon-essentials": "^6.1.4",
