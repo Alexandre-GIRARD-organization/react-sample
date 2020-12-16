@@ -54,6 +54,7 @@ export default function MarvelAppBar({ handleSearch }) {
               <SearchIcon />
             </div>
             <InputBase
+              id="searchInput"
               placeholder="Search…"
               classes={{
                 root: classes.inputRoot,

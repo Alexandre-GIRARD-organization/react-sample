@@ -12,7 +12,7 @@ import debounce from 'lodash.debounce';
 
 // use to mock service in development
 if (process.env.NODE_ENV === "development") {
-  makeServer({ environment: "development" })
+  //makeServer({ environment: "development" })
 }
 
 function App() {
