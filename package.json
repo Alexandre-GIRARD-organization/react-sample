@@ -23,7 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "endToEndTest": "cucumber-js --publish",
+    "endToEndTest": "CUCUMBER_PUBLISH_TOKEN=ce9e10a5-e011-47a4-a4c0-6ee7f5f1d0d8 cucumber-js --publish",
     "coverage": "react-scripts test --coverage --watchAll=false --collectCoverageFrom=src/**/*.{js,jsx} --collectCoverageFrom='!src/**/*.stories.js' --collectCoverageFrom='!src/stories/**/*.*'",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",

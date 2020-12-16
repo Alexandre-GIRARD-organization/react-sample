@@ -1,5 +1,5 @@
-Feature: Is it marvel search work ?
-    Everybody wants to search for Wolverine
+Feature: Is marvel search work ?
+    Everybody wants to search for Marvel character
 
     Scenario: Finding Wolverine
         Given I am on the home page

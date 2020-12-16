@@ -1,6 +1,6 @@
 const { Given, When, Then, AfterAll } = require('@cucumber/cucumber');
 const { Builder, By, Capabilities, Key } = require('selenium-webdriver');
-const { expect } = require('chai');
+const { should } = require('chai');
 
 require("chromedriver");
 
@@ -21,7 +21,8 @@ When('I search for {string}', async function (searchTerm) {
 
 Then('the page title should be {string}', async function (searchTerm) {
     const title = await driver.getTitle();
-    expect(title).to.equal(searchTerm);
+    should();
+    title.should.equal(searchTerm   );
 });
 
 AfterAll(async function(){
